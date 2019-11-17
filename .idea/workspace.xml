@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0364fbc2-5a4d-4904-8278-2d819b045dd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edx_javacore_2_module_1/ArrayListExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edx_javacore_2_module_1_project_Battle_ships/Battle_ship project description" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edx_javacore_2_module_1_project_Battle_ships/BattleShip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Edx Java Object Oriented Progr practice/edx_javacore_2_module_1/ArrayListEx.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ArrayListExercise">
+  <component name="RunManager" selected="Application.BattleShip">
     <configuration name="ArrayListExercise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edx_javacore_2_module_1.ArrayListExercise" />
       <module name="Edx Java Object Oriented Progr practice" />
@@ -73,8 +72,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BattleShip" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edx_javacore_2_module_1_project_Battle_ships.BattleShip" />
+      <module name="Edx Java Object Oriented Progr practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edx_javacore_2_module_1_project_Battle_ships.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BattleShip" />
         <item itemvalue="Application.ArrayListExercise" />
         <item itemvalue="Application.Arrays2D" />
       </list>
