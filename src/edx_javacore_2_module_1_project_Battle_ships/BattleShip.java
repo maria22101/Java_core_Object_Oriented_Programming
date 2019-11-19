@@ -32,11 +32,11 @@ public class BattleShip {
         for (int i = 0; i < ch.length; i++) {
             for (int j = 0; j < ch[i].length; j++) {
                 if ((i != 0) && (i != ch.length - 1)
-                             && (j !=0)
-                             && (j != ch[i].length - 1)
-                             && (ch[i][j] == '1')) {
+                        && (j != 0)
+                        && (j != ch[i].length - 1)
+                        && (ch[i][j] == '1')) {
                     System.out.print('@');
-                }else {
+                } else {
                     System.out.print(ch[i][j]);
                 }
             }
@@ -44,7 +44,7 @@ public class BattleShip {
         }
     }
 
-    static void askUserToDeployShips(char [][] ch) {
+    static void askUserToDeployShips(char[][] ch) {
         Scanner scanner = new Scanner(System.in);
         int shipsCount = 1;
         int x;
@@ -52,19 +52,24 @@ public class BattleShip {
         while (shipsCount <= 5) {
 
             do {
-                System.out.printf("Enter X coordinate for your ship # %d: ", shipsCount);
+                System.out.printf("Enter your coordinates (within 0-9) for your ship #%d \n", shipsCount);
+                System.out.print("Enter X coordinate: ");
                 x = scanner.nextInt();
-                System.out.printf("Enter Y coordinate for your ship # %d: ", shipsCount);
+                System.out.print("Enter Y coordinate: ");
                 y = scanner.nextInt();
-            }while (x >= 0 && x <= 9 && y >= 0 && y <= 9 && ch[x][y] == '0');
+            } while (x < 0 || x > 9 || y < 0 || y > 9);
 
-            ch[y+1][x+2] = '1';
+            if (ch[x][y] == '0') {
+                System.out.println("Coordinates must be within 0-9 range");
+                continue;
+            }
+            ch[y + 1][x + 2] = '1';
             shipsCount++;
         }
     }
 
     public static void main(String[] args) {
-        char [][] oceanMap = generateOceanMap();
+        char[][] oceanMap = generateOceanMap();
         displayOceanMap(oceanMap);
         askUserToDeployShips(oceanMap);
         displayOceanMap(oceanMap);
