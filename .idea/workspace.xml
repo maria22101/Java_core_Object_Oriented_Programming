@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0364fbc2-5a4d-4904-8278-2d819b045dd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edx_javacore_2_module_1_project_Battle_ships/BattleShip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Edx Java Object Oriented Progr practice/edx_javacore_2_module_1/ArrayListEx.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edx_javacore_2_module_1_project_Battle_ships/BattleShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edx_javacore_2_module_1_project_Battle_ships/BattleShip.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
