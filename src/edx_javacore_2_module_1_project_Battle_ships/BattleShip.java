@@ -1,5 +1,7 @@
 package edx_javacore_2_module_1_project_Battle_ships;
 
+import java.util.Scanner;
+
 public class BattleShip {
 
     static char[][] generateOceanMap() {
@@ -29,14 +31,42 @@ public class BattleShip {
     static void displayOceanMap(char[][] ch) {
         for (int i = 0; i < ch.length; i++) {
             for (int j = 0; j < ch[i].length; j++) {
-                System.out.print(ch[i][j]);
+                if ((i != 0) && (i != ch.length - 1)
+                             && (j !=0)
+                             && (j != ch[i].length - 1)
+                             && (ch[i][j] == '1')) {
+                    System.out.print('@');
+                }else {
+                    System.out.print(ch[i][j]);
+                }
             }
             System.out.println();
         }
     }
 
+    static void askUserToDeployShips(char [][] ch) {
+        Scanner scanner = new Scanner(System.in);
+        int shipsCount = 1;
+        int x;
+        int y;
+        while (shipsCount <= 5) {
+
+            do {
+                System.out.printf("Enter X coordinate for your ship # %d: ", shipsCount);
+                x = scanner.nextInt();
+                System.out.printf("Enter Y coordinate for your ship # %d: ", shipsCount);
+                y = scanner.nextInt();
+            }while (x >= 0 && x <= 9 && y >= 0 && y <= 9 && ch[x][y] == '0');
+
+            ch[y+1][x+2] = '1';
+            shipsCount++;
+        }
+    }
+
     public static void main(String[] args) {
         char [][] oceanMap = generateOceanMap();
+        displayOceanMap(oceanMap);
+        askUserToDeployShips(oceanMap);
         displayOceanMap(oceanMap);
 
     }
