@@ -1,5 +1,6 @@
 package edx_javacore_2_module_1_project_Battle_ships;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class BattleShip {
@@ -59,11 +60,33 @@ public class BattleShip {
                 y = scanner.nextInt();
             } while (x < 0 || x > 9 || y < 0 || y > 9);
 
-            if (ch[x][y] == '0') {
-                System.out.println("Coordinates must be within 0-9 range");
+            if (ch[y + 1][x + 2] == '1') {
+                System.out.println("A ship is already there");
                 continue;
             }
             ch[y + 1][x + 2] = '1';
+            shipsCount++;
+        }
+    }
+
+    static void askComputerToDeployShips(char[][] ch) {
+        int shipsCount = 1;
+        int x;
+        int y;
+
+        while (shipsCount <= 5) {
+
+            do {
+                x = (int) (Math.random() * 10);
+                y = (int) (Math.random() * 10);
+            } while (x < 0 || x > 9 || y < 0 || y > 9);
+
+            if (ch[y + 1][x + 2] == '1' || ch[y + 1][x + 2] == '2') {
+                continue;
+            }
+
+            ch[y + 1][x + 2] = '2';
+            System.out.printf("%d. ship deployed at %d, %d coordinate \n", shipsCount, x, y);
             shipsCount++;
         }
     }
@@ -72,6 +95,7 @@ public class BattleShip {
         char[][] oceanMap = generateOceanMap();
         displayOceanMap(oceanMap);
         askUserToDeployShips(oceanMap);
+        askComputerToDeployShips(oceanMap);
         displayOceanMap(oceanMap);
 
     }
