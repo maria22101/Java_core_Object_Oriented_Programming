@@ -91,6 +91,30 @@ public class BattleShip {
         }
     }
 
+    static boolean hasUserAnyShip(char[][] ch) {
+        boolean userHasShip = true;
+        for (int i = 1; i < ch.length - 1; i++) {
+            for (int j = 2; j < ch[i].length - 2; j++) {
+                if(ch[i][j] == '1') {
+                    return userHasShip;
+                }
+            }
+        }
+        return false;
+    }
+
+    static boolean hasComputerAnyShip(char[][] ch) {
+        boolean computerHasShip = true;
+        for (int i = 1; i < ch.length - 1; i++) {
+            for (int j = 2; j < ch[i].length - 2; j++) {
+                if(ch[i][j] == '2') {
+                    return computerHasShip;
+                }
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         char[][] oceanMap = generateOceanMap();
         displayOceanMap(oceanMap);
